@@ -216,7 +216,7 @@ class CuboidMakerTwo{
     return this.length * this.width *this.height;
   }
   surfaceArea(){
-    this.length * this.width + this.length * this.height + this.width * this.height;
+    return this.length * this.width + this.length * this.height + this.width * this.height;
   }
 }
 let cuboidTwo = new CuboidMakerTwo(4,5,5);
