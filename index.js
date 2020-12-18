@@ -16,8 +16,7 @@ function myFunction() {
 myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
-
-
+//"nestedFuncrion" can access "internal" because both are encapsulated at the same level within the parent function.
 
 
 
