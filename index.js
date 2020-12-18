@@ -100,11 +100,14 @@ const zooAnimals = [
   Remember the reduce method takes two arguments: a callback (which itself takes two args - the accumulator and the item), and an initial value for the count.
   */
 
-  function USApop(/*Your Code Here*/){
-    /*Your Code Here*/
+  function USApop(array){
+    let totalPop = array.reduce(function(counter,animal){
+      return counter +animal.population;
+    },0)
+    console.log(totalPop);
   }
-  
-  
+
+    
   // 🦁🦁🦁 Callbacks 🦁🦁🦁  
   /* 🦁🦁🦁 Step 1: Create a higher-order function 🦁🦁🦁
     * Use the higher-order function consume with 3 parameters: a, b and cb
@@ -114,21 +117,24 @@ const zooAnimals = [
   */
 
   function consume(a,b,cb){
-    return cb(a,b);
+    this.a=a;
+    this.b=b;
+    return (a,b);
   }
  
   
   /* 🦁🦁🦁 Step 2: Create several functions to callback with consume(); 🦁🦁🦁 */
  // 🦁🦁🦁 Use add to return the sum of two numbers 🦁🦁🦁
   
-function add(consume){
-    this.return 
+function add(){
+    consume.call(this,a,b);
+    return this.a + this.b;
   }
 
 // 🦁🦁🦁 Use multiply to return the product of two numbers 🦁🦁🦁
   
-function multiply(/*Your Code Here */){
-   /*Your Code Here */
+function multiply(){
+   consume.call(this,a,b);
   }
 
  // 🦁🦁🦁 Use greeting to accept a first and last name and return "Hello {first-name} {last-name}, nice to meet you!" 🦁🦁🦁
