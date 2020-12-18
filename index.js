@@ -15,9 +15,9 @@ function myFunction() {
 }
 myFunction();
 
-//🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
-//"nestedFuncrion" can access "internal" because both are encapsulated at the same level within the parent function.
+//🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀:
 
+    //"nestedFuncrion" can access "internal" because both are encapsulated at the same level within the parent function.
 
 
 /* 🚀🚀🚀 Task 2: Counter 🚀🚀🚀 */
@@ -27,13 +27,17 @@ myFunction();
     
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
-function summation(number) {
-  for(let i=0; i<number;i++){
-    let sum = summation(i.reduce);
-    return sum;
+  function summation(number) {
+    let sum = [];
+    for(let i=0; i<number;i++){
+      sum.push(i+1);
+    }
+    let sumRed= sum.reduce(function(accumulator,currentValue){
+      return accumulator + currentValue;
+    },0);
+    return sumRed;
   }
-}
-console.log(summation(4));
+  console.log(summation(4));
  
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
@@ -119,28 +123,27 @@ const zooAnimals = [
   function consume(a,b,cb){
     this.a=a;
     this.b=b;
-    return (a,b);
+    return cb(a,b);
   }
  
   
   /* 🦁🦁🦁 Step 2: Create several functions to callback with consume(); 🦁🦁🦁 */
  // 🦁🦁🦁 Use add to return the sum of two numbers 🦁🦁🦁
   
-function add(){
-    consume.call(this,a,b);
+  function add(){
     return this.a + this.b;
   }
 
 // 🦁🦁🦁 Use multiply to return the product of two numbers 🦁🦁🦁
   
-function multiply(){
-   consume.call(this,a,b);
+  function multiply(){
+    return this.a * this.b;
   }
+
 
  // 🦁🦁🦁 Use greeting to accept a first and last name and return "Hello {first-name} {last-name}, nice to meet you!" 🦁🦁🦁
   
 function greeting(){
-    consume.call(this,a,b);
    return `Hello ${this.a} ${this.b}, nice to meet you!`;
   }
   
