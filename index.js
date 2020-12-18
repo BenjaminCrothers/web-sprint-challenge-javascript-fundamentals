@@ -67,7 +67,6 @@ const zooAnimals = [
     str.push(`name: ${animal.animal_name}, scientific: ${animal.scientific_name}`);
   }
   zooAnimals.forEach(animalNames);
-  console.log(str);
   
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
@@ -82,7 +81,6 @@ const zooAnimals = [
     });
     console.log(lowCap);
   }
-  console.log(lowerCaseNames(zooAnimals));
   
   
   /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
